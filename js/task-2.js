@@ -1,10 +1,7 @@
 //====================================================================
-function formatMessage(message, maxLength) {
-  if (message.length <= maxLength) {
-    return message;
-  } else {
-    return `${message.slice(0, maxLength).trim()}...`;
-  }
+function makeArray(firstArray, secondArray, maxLength) {
+  let wholeArray = firstArray.concat(secondArray);
+  return wholeArray.slice(0, maxLength);
 }
 
 console.log(makeArray(['Mango', 'Poly'], ['Ajax', 'Chelsea'], 3)); // ["Mango", "Poly", "Ajax"]
